@@ -30,7 +30,7 @@ jobs:
       
       - run: mvn compile
       
-      - run: mvn package
+      - run: mvn package -Dmaven.test.skip=true
       
       - store_test_results:
           path: target/surefire-reports
