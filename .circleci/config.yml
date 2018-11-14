@@ -26,6 +26,10 @@ jobs:
             - ~/.m2
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       
+      - run: mvn clean
+      
+      - run: mvn compile
+      
       - run: mvn package
       
       - store_test_results:
